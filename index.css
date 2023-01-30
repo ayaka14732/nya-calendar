@@ -1,0 +1,140 @@
+html {
+  min-height: 100vh;
+}
+
+body {
+  background: #dfebed;
+  font-family: sans-serif, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.calendar {
+  min-width: min(600px, 80vw);
+  background: #2b4450;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+  .calendar {
+    min-width: 100vw;
+    min-height: 100vh;
+    border-radius: inherit;
+  }
+}
+
+.current-date {
+  border-bottom: 1px solid rgba(73, 114, 133, 0.6);
+  padding: 20px 45px 15px 45px;
+  line-height: 1.8;
+  position: relative;
+}
+
+.current-date > .link-github {
+  position: absolute;
+  top: 26px;
+  right: 45px;
+}
+
+.current-date > h1 {
+  color: #dfebed;
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+.current-date > h1#nya-date {
+  font-weight: 600;
+}
+
+.current-date > h1 > input[type="date"],
+.current-date > h1 > input[type="date"]:focus-visible {
+  color: inherit;
+  background-color: inherit;
+  border: none;
+  font: inherit;
+  padding: inherit;
+  line-height: inherit;
+  outline: inherit;
+  transform: translateX(-1px);
+}
+
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field {
+  color: inherit;
+}
+
+::-webkit-calendar-picker-indicator {
+  padding-left: 10px;
+  filter: invert(100%) opacity(0.8);
+}
+
+.current-month {
+  color: #fff;
+  padding: 5px 40px 15px 40px;
+}
+
+.current-month > div {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.current-month > div > span {
+  width: 2em;
+}
+
+.current-month > .week-days {
+  color: #dfebed;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.current-month > .week-days > span {
+  padding: 1em 0;
+}
+
+.current-month > .week {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.current-month > .week > .extended {
+  opacity: 0.3;
+}
+
+.current-month > .week > span:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.current-month > .week > span > .nya {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.current-month > .week > .active > .nya {
+  background: #f78536;
+  border-radius: 100%;
+}
+
+.current-month > .week > span > .gregorian {
+  display: block;
+  font-size: 0.65em;
+  padding-top: 1px;
+}
