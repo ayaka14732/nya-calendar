@@ -164,7 +164,7 @@ const renderDate = (pureDate) => {
 };
 
 const loadData = async () => {
-  const request = await fetch("computation/dates.txt");
+  const request = await fetch("dates.txt");
   const response = await request.text();
   mapping = response
     .trimEnd()

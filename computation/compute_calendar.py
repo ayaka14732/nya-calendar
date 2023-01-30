@@ -147,7 +147,7 @@ date = datetime(2010, 5, 14)
 date_end = datetime(2011, 5, 12)
 moon_pointer = 0
 
-with open('dates.txt', 'w', encoding='utf-8') as f:
+with open('../dates.txt', 'w', encoding='utf-8') as f:
     for _, _, _, start_date, middle_date, end_date, should_change_merth, should_change_year in moon:
         if should_change_year:
             year += 1
