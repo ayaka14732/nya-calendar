@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .calendar {
   min-width: min(600px, 80vw);
   background: #2b4450;
