@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Nya Calendar, Gregorian Calendar, Lunisolar-Mercurial Calendar, Synodic period, Mercury inferior conjunction, Full moon, New moon, Summer day, New Year, Closest day, Merths, Months, Year, Day, Transit of Mercury, Mercury retrograde, Comparison">
   <link rel="stylesheet" type="text/css" href="index.css">
   <script src="index.js"></script>
   <title>若历计算器</title>
@@ -16,6 +17,10 @@
       <h1><input type="date" id="calendar-input" min="2010-06-13" max="2049-11-25" required onchange="handleOnChange()"></h1>
     </div>
     <div class="current-month" id="output-area"></div>
+  </div>
+  <div class="hidden">
+    <p>The Nya Calendar is a custom calendar system that includes years, merths, months, and days. It defines the nearest day of the moment of the first Mercury inferior conjunction on a summer day as the Nya Calendar New Year. The full moon determines each Nya Calendar month, which is calculated as the period from the nearest day of the last new moon to the day before the nearest day of the next new moon. The inferior conjunction of Mercury determines one Nya Calendar merth, which consists of all the months between the current and next Mercury inferior conjunction.</p>
+    <p>The Nya Calendar has several unique properties, including the determination of the full moon and new moon, the existence of a year 0, the counting of merths and months from zero, taking into account the orbital period of Mercury, and the ability to observe the transit and retrograde of Mercury. The New Year falls on a full moon and the length of each year is similar to the Gregorian year. The astronomical calculations are performed using the Jet Propulsion Laboratory's API and the calendar calculations are implemented in Python.</p>
   </div>
 </body>
 </html>
