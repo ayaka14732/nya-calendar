@@ -60,16 +60,14 @@ const buildCalendarData = (pureDate) => {
   while (nyaDateToMonth(mapping[rightIdx + 1].nya) === nyaMonth) rightIdx++;
 
   // Extend to full weeks
-  const leftIdxExtended =
-    leftIdx -
-    ((getDayOfWeekFromDateString(mapping[leftIdx].gregorian) + 6) % 7);
-  const rightIdxExtended =
-    rightIdx +
-    ((7 - getDayOfWeekFromDateString(mapping[rightIdx].gregorian)) % 7);
+  const leftDayOfWeek = getDayOfWeekFromDateString(mapping[leftIdx].gregorian);
+  const rightDayOfWeek = getDayOfWeekFromDateString(mapping[rightIdx].gregorian);
+  const leftIdxExtended = leftIdx - (leftDayOfWeek == 1 ? 7 : (leftDayOfWeek + 6) % 7);
+  const rightIdxExtended = rightIdx + (rightDayOfWeek == 0 ? 7 : (7 - rightDayOfWeek) % 7);
 
   let pointer = leftIdxExtended;
   const res = [];
-  // console.log(leftIdx, rightIdxExtended, nyaMonth);
+  // console.log(leftIdxExtended, rightIdxExtended, nyaMonth);
 
   while (pointer <= rightIdxExtended) {
     const week = [];
