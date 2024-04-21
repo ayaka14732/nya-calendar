@@ -4,6 +4,8 @@ The Nya calendar is a novel calendar system that includes years, merths, months,
 
 The Nya calendar has several unique properties, including the determination of the full moon and new moon, the existence of a year 0, the counting of merths and months from zero, taking into account the orbital period of Mercury, and the ability to observe the transit and retrograde of Mercury. The new year falls on a full moon and the length of each year is similar to the Gregorian year. The astronomical calculations are performed using the Jet Propulsion Laboratory's API and the calendar calculations are implemented in Python.
 
+There is also a Chinese version of the introduction of the Nya calendar on Zhihu: <https://www.zhihu.com/question/446997562/answer/2865773927>.
+
 ## Definitions
 
 **Mercury Inferior Conjunction**: The moment when the ecliptic of Mercury equals to that of the Sun, and Mercury is closer to the Earth than the Sun is.
